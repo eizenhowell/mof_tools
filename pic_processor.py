@@ -1,4 +1,6 @@
+import os
 from PIL import Image, ImageDraw
+
 def splice_and_rejoin(src, map_src):
 	"""
 		Splice image and rejoin them. Us
