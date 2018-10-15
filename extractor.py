@@ -19,6 +19,7 @@ def move_extracted_ravioli (src_folder, trg_folder, filename="/File0001.png", re
 		target_file = trg_folder+target_filename
 		
 		shutil.copy2(current_file, target_file)
+		print("Successfully copied file from {0} to {1}".format(current_file, target_file))
 
 def isExit(user_in):
 	if user_in == "exit":
@@ -27,8 +28,7 @@ def isExit(user_in):
 		
 def main():
 	currently_running = True
-	while currently_running:
-		print("""
+	print("""
 ==============================================================================
 ##     ##  #######  ########    ########  #######   #######  ##        ######  
 ###   ### ##     ## ##             ##    ##     ## ##     ## ##       ##    ## 
@@ -38,7 +38,9 @@ def main():
 ##     ## ##     ## ##             ##    ##     ## ##     ## ##       ##    ## 
 ##     ##  #######  ##             ##     #######   #######  ########  ######  
 ==============================================================================
-		""")
+	""")
+	while currently_running:
+		print("Type 'exit' or CTRL+C to quit the application")
 		print("Source Folder Address: ", end="")
 		src_folder = input()
 		if isExit(src_folder): break
